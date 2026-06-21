@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vrindaa Gupta - Resume</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+            body {
+            font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background: #f5f5f5;
+            }
+            .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            }
+            .header {
+            background: white;
+            color: #333;
+            padding: 15px 40px;
+            }
+            .header-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            }
+            .profile-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #f0f9ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: #1a6fd4 ;
+            border: 3px solid #1a6fd4 ;
+            flex-shrink: 0;
+            }
+            .header-text {
+            flex: 1;
+            }
+            .header h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 0px;
+            letter-spacing: 1px;
+            color: #000;
+            }
+            .header .subtitle {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #1a6fd4 ;
+            font-weight: 600;
+            }
+            .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            font-size: 14px;
+            margin-top: 8px;
+            color: #333;
+            }
+            .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            }
+            .contact-info i {
+            font-size: 16px;
+            color: #1a6fd4 ;
+            }
+            .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 0;
+            }
+            .left-column {
+            padding: 10px 30px;
+            border-right: 3px solid #e5e7eb;
+            }
+            .right-column {
+            padding: 10px 30px;
+            background: #f9fafb;
+            }
+            .section {
+            margin-bottom: 20px;
+            }
+            .section-title {
+            font-size: 17px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 10px;
+            padding-bottom: 2px;
+            border-bottom: 2px solid #000;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            }
+            .summary-text {
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            }
+            .job {
+            margin-bottom: 16px;
+            position: relative;
+            padding-left: 50px;
+            }
+            .company-logo {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 45px;
+            height: 45px;
+            background: white;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #1a6fd4 ;
+            overflow: hidden;
+            padding: 4px;
+            }
+            .company-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            }
+            .job-header {
+            margin-bottom: 7.5px;
+            }
+            .job-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 2px;
+            }
+            .company-name {
+            font-size: 14px;
+            font-weight: bold;
+            color: #1a6fd4 ;
+            }
+            .job-meta {
+            font-size: 13px;
+            color: #666;
+            display: flex;
+            gap: 16px;
+            margin-top: 4px;
+            }
+            .job-meta span {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            }
+            .job-meta i {
+            color: #1a6fd4 ;
+            }
+            .responsibilities {
+            margin-top: 5px;
+            }
+            .responsibility {
+            margin-bottom: 8px;
+            font-size: 13px;
+            padding-left: 12px;
+            position: relative;
+            line-height: 1.5;
+            color: #333;
+            }
+            .responsibility:before {
+            content: "●";
+            position: absolute;
+            left: 0;
+            color: #1a6fd4 ;
+            font-weight: bold;
+            }
+            .responsibility strong {
+            color: #000;
+            }
+            .education-item, .cert-item {
+            margin-bottom: 16px;
+            font-size: 13px;
+            }
+            .education-icon, .cert-icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 28px;
+            height: 28px;
+            background: #f0f9ff;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #1a6fd4 ;
+            }
+            .education-degree, .cert-name {
+            font-weight: bold;
+            color: #000;
+            font-size: 14px;
+            }
+            .education-school, .cert-org {
+            color: #1a6fd4 ;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 0.5px;
+            }
+            .education-details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4px;
+            font-size: 12px;
+            color: #666;
+            }
+            .achievement {
+            margin-bottom: 7px;
+            position: relative;
+            padding-left: 30px;
+            }
+            .achievement:before {
+            content: "❖";
+            position: absolute;
+            left: 2px;
+            top: -2px;
+            color: #1a6fd4 ;
+            font-size: 18px;
+            }
+            .achievement-title {
+            font-weight: bold;
+            color: #000;
+            font-size: 15px;
+            margin-bottom: 3px;
+            }
+            .achievement-desc {
+            font-size: 13px;
+            line-height: 1.3;
+            text-align: justify;
+            color: #333;
+            }
+            .project {
+            margin-bottom: 8px;
+            }
+            .project-title {
+            font-weight: bold;
+            color: #000;
+            font-size: 13.5px;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            }
+            .ptag { font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 3px; letter-spacing: 0.3px; text-transform: uppercase; }
+            .ptag-au { background: #dbeafe; color: #1e40af; }
+            .ptag-uk { background: #ede9fe; color: #5b21b6; }
+            .ptag-ai { background: #fef9c3; color: #854d0e; }
+            .ptag-wip { background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; }
+            .project-desc {
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: justify;
+            color: #333;
+            }
+            .skills-category {
+            margin-bottom: 10px;
+            }
+            .skills-category-title {
+            font-weight: bold;
+            color: #1a6fd4 ;
+            font-size: 14px;
+            margin-bottom: 4px;
+            }
+            .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px 15px;
+            font-size: 13px;
+            color: #000;
+            font-weight: bold;
+            }
+            .skills-grid-item {
+            position: relative;
+            padding-left: 12px;
+            }
+            .skills-grid-item:before {
+            content: "●";
+            position: absolute;
+            left: 0;
+            color: #1a6fd4 ;
+            font-size: 10px;
+            top: 2px;
+            }
+            /* Skills Grid Layout (Box Style) */
+            .skills-container { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 8px; 
+            }
+            .skill-group-title { 
+            font-size: 14px; 
+            font-weight: 800; 
+            color: #1a6fd4 ; 
+            margin-bottom: 6px; 
+            border-bottom: 1px dashed #ddd; 
+            padding-bottom: 3px; 
+            }
+            .skill-box-grid { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 8px; 
+            margin-bottom: 15px; 
+            }
+            .skill-item { 
+            border: 1px solid #d1d5db; 
+            padding: 4px 10px; 
+            border-radius: 4px; 
+            font-size: 13px; 
+            font-weight: 600; 
+            background: white; 
+            color: #374151; }
+            .award-item {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 30px;
+            }
+            .award-item:before {
+            content: "★";
+            position: absolute;
+            left: 8px;
+            top: -2px;
+            color: #1a6fd4 ;
+            font-size: 18px;
+            }
+            .award-title {
+            font-weight: bold;
+            color: #000;
+            font-size: 15px;
+            }
+            .award-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.4;
+            }
+            .award-period {
+            font-size: 13px;
+            color: #999;
+            margin-top: 2px;
+            }
+            @media (max-width: 768px) {
+            .main-content {
+            grid-template-columns: 1fr;
+            }
+            .left-column {
+            border-right: none;
+            border-bottom: 3px solid #e5e7eb;
+            }
+            .header-content {
+            flex-direction: column;
+            text-align: center;
+            }
+            .skills-grid {
+            grid-template-columns: 1fr;
+            }
+            @media print {
+            body {
+            background: white;
+            }
+            .container {
+            box-shadow: none;
+            margin: 0;
+            }
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>VRINDAA GUPTA</h1>
+                    <div class="subtitle">Product Manager | Analytics & Platform Products | Strategy & Innovation</div>
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +91-9717679704</span>
+                        <span><i class="fas fa-envelope"></i> gupta.vrindaa@gmail.com</span>
+                        <span><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vrindaagupta/" target="_blank">LinkedIn Profile</a></span>
+                        <span><i class="fas fa-globe"></i> <a href="https://guptavrindaa.github.io" target="_blank">guptavrindaa.github.io</a></span>
+                        <span><i class="fab fa-github"></i> <a href="https://github.com/guptavrindaa" target="_blank">GitHub Profile</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+        <div class="left-column">
+            <div class="section">
+                <div class="section-title">SUMMARY</div>
+                <p class="summary-text">Product Manager with nearly 8 years driving both feature and data products, analytics platforms, and AI-powered automation across AU and UK FinTech markets. Track record of shipping high-impact features — from Research Suite and AFSL Dashboard engines to Copilot Studio agents and Power Automate workflows — that directly translate into advisor adoption and revenue. Equally comfortable writing SQL and stakeholder decks; experienced in end-to-end product delivery across agile, cross-functional teams in regulated financial environments.</p>
+            </div>
+            <div class="section">
+                <div class="section-title">EXPERIENCE</div>
+                <div class="job">
+                    <div class="company-logo"><img src="https://media.licdn.com/dms/image/v2/D560BAQE_wQbnak17_Q/company-logo_200_200/company-logo_200_200/0/1688240635457/morningstar_logo?e=2147483647&v=beta&t=BcEndneUJIk4PtYY0eI52hXwzJac8HxS9VMz8dRHkDg" alt="Morningstar Logo"></div>
+                    <div class="job-header">
+                        <div class="job-title">Product Manager</div>
+                        <div class="company-name">Morningstar India Pvt. Ltd</div>
+                        <div class="job-meta">
+                            <span><i class="fas fa-calendar-alt"></i> Apr 2021 – Present</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Gurugram (Hybrid)</span>
+                        </div>
+                        <div style="margin-top:4px;font-size:11.5px;color:#6b7280;font-style:italic;">
+                            Business Analyst (Apr 2021) → Senior Business Analyst (Jan 2023) → Lead Business Analyst (Jul 2024) → Product Manager (Oct 2025) · Performing end-to-end PO responsibilities since Jan 2024
+                        </div>
+                        <div style="margin-top:4px;font-size:11.5px;color:#6b7280;">
+                            <i class="fas fa-layer-group" style="color:#1a6fd4;margin-right:4px;"></i>
+                            <strong style="color:#374151;">Products:</strong> AdviserLogic · Adviser Research Centre · Advisor Workstation · Morningstar Direct · Wealthcraft · Morningstar Investor
+                        </div>
+                    </div>
+                    <div class="responsibilities">
+                        <div class="responsibility"><strong>Led multiple 0→1 product initiatives,</strong> including the Research Analytics Package and AFSL Insights Dashboard — owning discovery, vision, MVP delivery, and GTM across AU & UK markets; Research Analytics drove £150K p.a. revenue increase in the UK Wealthcraft product, while AFSL Dashboard rebuild on Apache Superset safeguarded AUD $120K+ p.a. in revenue.</div>
+                        <div class="responsibility"><strong>Defined product vision and roadmap,</strong> for an AI-powered Data Monitoring Framework evolving the IAP Dataset into an automated PDS, fees, research, Super Fund Options, and SMA data pipeline using hybrid LLM and rules-based architecture; $40K p.a. cost saving projected.</div>                       
+                        <div class="responsibility"><strong>Drove high-impact, domain-complex features</strong> such as Group SMA, Finametrica Risk Profiling, Family Fee Aggregation, Engagement Calculators, and Datafeed Provider Integrations—expanding advisor adoption and market penetration by ~30–40%.</div>
+                        <div class="responsibility"><strong>Made critical product and architecture trade-offs</strong> across data sourcing (DWS vs Data Lake), calculated fields, and analytics tooling—balancing accuracy, scalability, cost, and time-to-market while working across multiple teams in parallel.</div>
+                        <div class="responsibility"><strong>Owned end-to-end integration and data consistency,</strong> partnering directly with external datafeed providers, validating APIs using Postman, and ensuring downstream modules (portfolio analytics, advice workflows, reporting) remained aligned post-integration.</div>
+                        <div class="responsibility"><strong>Led strategic system sunsets and migrations,</strong> including legacy analytics Enterprise Components and AWS Office UK, following deep GAP analysis to reduce technical debt while protecting advisor workflows and revenue continuity.</div>
+                        <div class="responsibility"><strong>Scaled execution through cross-functional and people leadership,</strong> managing 30+ engineers, 6 Business Analysts, and 3 Product Specialists while mentoring teams through organizational restructuring and sustained multi-project delivery.</div>
+                        <div class="responsibility"><strong>Established strong execution rigor and operational efficiency,</strong> introducing automation, improving workflows by ~70%, and publishing performance scorecards and OKR dashboards to enable data-driven prioritization.</div>
+                    </div>
+                </div>
+                <div class="job">
+                    <div class="company-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD0G43kTnFrWvPMV-9h27UrqBuCwauxwMU7A&s" alt="Think Future Technologies Logo"></div>
+                    <div class="job-header">
+                        <div class="job-title">Business Analyst, Consultant</div>
+                        <div class="company-name">Think Future Technologies</div>
+                        <div class="job-meta">
+                            <span><i class="fas fa-calendar-alt"></i> 11/2020 – 03/2021</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Gurugram (WFH)</span>
+                        </div>
+                    </div>
+                    <div class="responsibilities">
+                        <div class="responsibility">Third-party consultant to Morningstar India Pvt. Ltd.</div>
+                        <div class="responsibility"><strong>Conducted Research for Strategic Insights:</strong> Led primary and secondary research to define and collect key fee parameters for Australian Superannuation and Investment platforms, providing actionable insights for Morningstar's internal use and external sales.</div>
+                        <div class="responsibility"><strong>Defined Data Requirements for IAP Project:</strong> Played a key role in gathering and structuring critical data, contributing to the development of the Investment Access Point (IAP) used by Morningstar for market analysis and product offerings.</div>
+                    </div>
+                </div>
+                <div class="job">
+                    <div class="company-logo"><img src="https://media.licdn.com/dms/image/v2/C4D0BAQHiQg9scWVUnA/company-logo_200_200/company-logo_200_200/0/1668961368436?e=2147483647&v=beta&t=WN0_kfmChdfCaYL1_SHXRqJeww00NUkSdA7Mn12PLpY" alt="Pioneer E Solutions Logo"></div>
+                    <div class="job-header">
+                        <div class="job-title">Office Assistant</div>
+                        <div class="company-name">Pioneer E Solutions</div>
+                        <div class="job-meta">
+                            <span><i class="fas fa-calendar-alt"></i> 08/2020 – 11/2020</span>
+                            <span><i class="fas fa-map-marker-alt"></i> New Delhi</span>
+                        </div>
+                    </div>
+                    <div class="responsibilities">
+                        <div class="responsibility">Third-party consultant to Supreme Court of India</div>
+                        <div class="responsibility"><strong>Provided Legal and Technical Support:</strong> Delivered clerical and legal support to the internal development team working on the Supreme Court's e-filing software project.</div>
+                        <div class="responsibility"><strong>Enhanced Software Functionality:</strong> Assisted in identifying bugs and new requirements for the e-filing system, and researched third-party software solutions for integration with the existing platform to improve functionality and user experience.</div>
+                    </div>
+                </div>
+                <div class="job">
+                    <div class="company-logo"><img src="https://pbs.twimg.com/profile_images/1742545784669614080/Ga8xyy7v_400x400.jpg" alt="Bank of India Logo"></div>
+                    <div class="job-header">
+                        <div class="job-title">General Banking Officer (JMG-I)</div>
+                        <div class="company-name">Bank of India</div>
+                        <div class="job-meta">
+                            <span><i class="fas fa-calendar-alt"></i> 08/2019 – 08/2020</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Agra</span>
+                        </div>
+                    </div>
+                    <div class="responsibilities">
+                        <div class="responsibility"><strong>Managed Banking Operations:</strong> Handled day-to-day general banking operations, ensuring smooth service delivery while adhering to zonal and head office guidelines.</div>
+                        <div class="responsibility"><strong>Implemented Government Initiatives:</strong> Facilitated the implementation of various government schemes, ensuring compliance with regulatory requirements and supporting financial inclusion efforts.</div>
+                    </div>
+                </div>
+                <div class="job">
+                    <div class="company-logo"><img src="https://media.licdn.com/dms/image/v2/C510BAQGKmrtAW5TlYw/company-logo_200_200/company-logo_200_200/0/1630586321635/velocis_systems_logo?e=2147483647&v=beta&t=dlBksZWeTxyuloD3aTXo12Jsjsy-vq5rUI1WzpSV890" alt="Velocis Systems Logo"></div>
+                    <div class="job-header">
+                        <div class="job-title">General Management Support L-I</div>
+                        <div class="company-name">Velocis Systems Pvt. Ltd</div>
+                        <div class="job-meta">
+                            <span><i class="fas fa-calendar-alt"></i> 09/2018 – 08/2019</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Noida</span>
+                        </div>
+                    </div>
+                    <div class="responsibilities">
+                        <div class="responsibility"><strong>Provided Consulting for NICSI:</strong> Acted as a third-party consultant to the National Informatics Center Services Inc. (NICSI), supporting various projects within the Public Financial Management System (PFMS).</div>
+                        <div class="responsibility"><strong>Managed Financial Accounts:</strong> Managed and tracked accounts for NICSI's PFMSEAT module, ensuring accurate financial reporting and compliance with government financial management standards.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">PROJECTS</div>
+                <div class="project">
+                    <div class="project-title">AI Data Monitoring Framework <span class="ptag ptag-au">AU</span> <span class="ptag ptag-ai">AI/LLM</span> <span class="ptag ptag-ai">Rules-based Scoring</span> <span class="ptag ptag-au">PDS · Fees · Research</span> <span class="ptag ptag-au">Super Funds · SMA</span> <span class="ptag ptag-wip">In Progress</span></div>
+                    <div class="project-desc">Evolved from the Investment Access Point (IAP) Dataset — defined product vision, requirements, and phased roadmap for an AI-powered monitoring framework automating PDS, fees, research, Industry Super Fund Options, and SMA data capture across AU investment platform providers. Architecture combines web crawlers (Scrapy + Playwright for JS-rendered pages), a weighted rules-based scoring engine, Azure OpenAI candidate filtering, and a human-in-the-loop moderation queue — backed by PostgreSQL on AWS RDS Aurora with a REST API layer. Drove feasibility assessment; scaled build in progress with Tech team.</div>
+                </div>
+                <div class="project">
+                    <div class="project-title">AFSL Dashboard — Apache Superset <span class="ptag ptag-au">AU</span> <span class="ptag ptag-ai">Apache Superset</span> <span class="ptag ptag-uk">Data Warehouse</span> <span class="ptag ptag-wip">GTM · Sunset & Re-build</span></div>
+                    <div class="project-desc">Drove the sunset of a legacy AFSL dashboard impacted by data inconsistencies and technical debt. Led rebuild on Apache Superset with a data warehouse as single source of truth, reducing user queries and restoring data trust. Conducted user interviews, defined user roles and access management, designed configurable dashboards with scope for premium monetisation, and developed end-to-end pricing structure, commercialisation approach, and GTM strategy. Managed complex stakeholder alignment across ProdTech, Professional Services, SalesOps, and Customer Support teams.</div>
+                </div>
+                <div class="project">
+                    <div class="project-title">Research Analytics Package <span class="ptag ptag-au">AU</span> <span class="ptag ptag-uk">UK</span> <span class="ptag ptag-ai">0→1 Build</span> <span class="ptag ptag-au">AdviserLogic · Wealthcraft</span> <span class="ptag ptag-wip">£150K p.a. Revenue</span></div>
+                    <div class="project-desc">Built a modular Research Analytics suite — including a customizable Investment Screener, Model Portfolio, Watchlist, and Portfolio Analytics Tool — with plug-and-play capabilities for regional adaptability. Successfully deployed in the UK and AU markets, aligning with local investment universes and completing the sunset of legacy Enterprise Component Tools to enhance advisor research workflows.</div>
+                </div>
+                <div class="project">
+                    <div class="project-title">AWS Office UK — Sunset & Migration <span class="ptag ptag-uk">UK</span> <span class="ptag ptag-ai">GAP Analysis</span> <span class="ptag ptag-au">Data Mapping</span> <span class="ptag ptag-wip">Migration</span></div>
+                    <div class="project-desc">Led the sunset planning and end-to-end migration of the AWS Office UK application, transitioning users to a modern Morningstar platform. Conducted comprehensive GAP analysis, product discovery, and data mapping to identify migration-critical fields and functionality. Collaborated with engineering to build a technical PoC and created detailed documentation with examples, enabling the Operations team to execute the migration as a BAU process. Ensured continuity of advisor workflows and reduced manual overhead post-migration.</div>
+                </div>
+                <div class="project">
+                    <div class="project-title">Investment Access Point Dataset <span class="ptag ptag-au">AU</span> <span class="ptag ptag-ai">Data Product</span> <span class="ptag ptag-au">Super Funds · Platforms</span> <span class="ptag ptag-wip">Foundation for AI Monitoring</span></div>
+                    <div class="project-desc">Designed and built an internal application to centralise qualitative (research) and quantitative (fees) data for Australian Superannuation and Investment Platforms. The dataset became a cornerstone of Morningstar's internal operations and a flagship external commercial offering in the AU market — and later served as the foundation for the AI Data Monitoring Framework.</div>
+                </div>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="section">
+                <div class="section-title">CERTIFICATIONS/TRAININGS</div>
+                <div class="cert-item">
+                    <div class="cert-name">Generative AI for Product Management</div>
+                    <div class="cert-org">Imarticus Learning — 2026</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">PL-900: Microsoft Power Platform Fundamentals</div>
+                    <div class="cert-org">Koeing Solutions Training — 2024</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">Professional Scrum Product Owner — PSPO</div>
+                    <div class="cert-org">Scrum.org — 2023</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">Microsoft Power BI</div>
+                    <div class="cert-org">Imarticus Learning — 2021</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">Capital & Derivative Markets Program</div>
+                    <div class="cert-org">National Stock Exchange Academy — 2017</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">EDUCATION</div>
+                <div class="education-item">
+                    <div class="education-icon"></div>
+                    <div class="education-degree">MBA (Finance/Marketing)</div>
+                    <div class="education-school">Guru Gobind Singh Indraprastha University</div>
+                    <div class="education-details">
+                        <span><i class="fas fa-calendar-alt"></i> 2015 – 2017 | <i class="fas fa-map-marker-alt"></i> Delhi</span>
+                        <span><strong>CGPA:</strong> 9.1/10</span>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-icon"></div>
+                    <div class="education-degree">B.Com (Hons)</div>
+                    <div class="education-school">Shaheed Bhagat Singh College [Delhi University]</div>
+                    <div class="education-details">
+                        <span><i class="fas fa-calendar-alt"></i> 2011 – 2014 | <i class="fas fa-map-marker-alt"></i> Delhi</span>
+                        <span><strong>%:</strong> 78.2/100</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">KEY ACHIEVEMENTS</div>
+                <div class="achievement">
+                    <div class="achievement-title">Subject Matter Expert (SME)</div>
+                    <div class="achievement-desc">Recognised as internal SME for AU/UK investment platform data — regularly called on to deliver product demos, stakeholder training, and advisory-workflow walkthroughs across Morningstar's global teams.</div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-title">BI & Reporting Modernisation</div>
+                    <div class="achievement-desc">Drove two generations of reporting modernisation — migrating manual Excel-based adoption tracking to automated Power BI dashboards, and subsequently leading the migration to Apache Superset as the single source of truth, delivering scalable self-serve reporting across 30+ datafeed providers and reducing manual effort significantly.</div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-title">Compliance Alignment & Operational Efficiency</div>
+                    <div class="achievement-desc">Collaborated with compliance stakeholders to ensure product alignment with ASIC RG97 guidelines, enhancing fee transparency for advisors, eliminating double-charging risks, and reducing high- and critical-priority ticket resolution times by 30%.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">SKILLS</div>
+                <div class="skills-container">
+                    <div class="skill-group">
+                        <div class="skill-group-title">CORE PRODUCT SKILLS</div>
+                        <div class="skill-box-grid">
+                            <span class="skill-item">Product Strategy</span> 
+                            <span class="skill-item">0→1 Development</span>
+                            <span class="skill-item">Product Discovery</span>
+                            <span class="skill-item">PRD</span>
+                            <span class="skill-item">MVP Delivery</span> 
+                            <span class="skill-item">Platform Products</span>
+                            <span class="skill-item">Agile/Scrum/Kanban</span> 
+                            <span class="skill-item">Product Led Growth</span>
+                            <span class="skill-item">Analytics Products</span> 
+                            <span class="skill-item">Product Prioritization</span>
+                            <span class="skill-item">Problem Solving</span>
+                            <span class="skill-item">Roadmapping</span>
+                            <span class="skill-item">User Story Mapping</span>
+                            <span class="skill-item">GTM Strategy</span>
+                            <span class="skill-item">Stakeholder Management</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-title">AI & AUTOMATION</div>
+                        <div class="skill-box-grid">
+                            <span class="skill-item">PowerApps</span>
+                            <span class="skill-item">Power Automate</span>
+                            <span class="skill-item">Dynamics 365</span>
+                            <span class="skill-item">Copilot Studio</span>
+                            <span class="skill-item">Workflows</span>
+                            <span class="skill-item">LLM Integrations</span>
+                            <span class="skill-item">AI Governance</span>
+                        </div>
+                    </div><div class="skill-group">
+                        <div class="skill-group-title">TECHNICAL & DATA</div>
+                        <div class="skill-box-grid">
+                            <span class="skill-item">Data Modelling</span>
+                            <span class="skill-item">ETL Processes</span>
+                            <span class="skill-item">SQL</span>
+                            <span class="skill-item">PostgreSQL</span>
+                            <span class="skill-item">Postman</span>
+                            <span class="skill-item">Power BI</span>
+                            <span class="skill-item">Tableau</span>
+                            <span class="skill-item">API Integrations & Validations</span>
+                            <span class="skill-item">BI & Analytics Tools</span>
+                            <span class="skill-item">Apache Superset</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-title">DESIGN & RESEARCH</div>
+                        <div class="skill-box-grid">
+                            <span class="skill-item">Figma</span>
+                            <span class="skill-item">Wireframing</span>
+                            <span class="skill-item">Lovable</span>
+                            <span class="skill-item">User Research</span>
+                            <span class="skill-item">Journey Mapping</span>
+                            <span class="skill-item">Amplitude</span>
+                            <span class="skill-item">Hotjar</span>
+                            <span class="skill-item">Google Tag Manager</span>
+                        </div>
+                    </div><div class="skill-group">
+                        <div class="skill-group-title">EXECUTION & LEADERSHIP</div>
+                        <div class="skill-box-grid">
+                            <span class="skill-item">Cross-functional Delivery</span>
+                            <span class="skill-item">Platform Migrations & Sunsets</span>
+                            <span class="skill-item">Risk, Dependency & Trade-off Management</span>
+                            <span class="skill-item">Change Management</span>
+                            <span class="skill-item">People Leadership & Mentorship</span>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">AWARDS</div>
+                        <div class="award-item">
+                            <div class="award-title">Spot Award Q1 2022</div>
+                            <div class="award-desc">Morningstar India Pvt. Ltd: Exemplary contribution towards team goals</div>
+                        </div>
+                        <div class="award-item">
+                            <div class="award-title">Star of the Quarter</div>
+                            <div class="award-period">Q3-2021 | Q3-2023 | Q1-2024 | Q3-2025</div>
+                            <div class="award-desc">Morningstar India Pvt. Ltd: Recognition of valuable contribution towards company</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
